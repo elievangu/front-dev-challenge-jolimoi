@@ -8,8 +8,8 @@ const Form = ({
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <input type="text" value={value} onChange={onChange} />
-        <input type="submit" value="Search" />
+        <input id="input" type="text" value={value} onChange={onChange} />
+        <input id="button" type="submit" value="Search" />
       </form>
     </div>
   )

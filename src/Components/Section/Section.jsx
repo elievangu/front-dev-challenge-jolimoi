@@ -12,7 +12,7 @@ const Section = ({
   result 
 }) => {
   return (
-    <div className="section">
+    <div id="section">
       <section>
         <Form 
           value={value} 

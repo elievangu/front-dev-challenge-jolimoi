@@ -1,17 +1,22 @@
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
-const Display = ({result}) => {
+const Display = (/*{result}*/) => {
   return (
-    <div>
+    <div id="display">
       <main>
-        {result}
+        <ul>
+          <li className="product"><span className="category">Absolution -</span> Day cream</li>
+          <li className="product"><span className="category">Absolution -</span> Night cream</li>
+          <li className="product"><span className="category">Dermance -</span> Pollution protection cream</li>
+          <li className="product"><span className="category">Dermance -</span> Anti-aging cream</li>
+        </ul>
       </main>
     </div>
   )
 }
 
-Display.propTypes = {
+/*Display.propTypes = {
   result: PropTypes.object
-};
+};*/
 
 export default Display;
