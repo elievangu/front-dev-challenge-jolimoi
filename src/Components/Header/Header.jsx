@@ -1,8 +1,8 @@
 //npm import
-import React from 'react';
+import React from "react";
 
 //Locale import
-import image from './beauty-products.jpg';
+import image from "./beauty-products.jpg";
 
 const Header = () => {
   return (
@@ -10,13 +10,13 @@ const Header = () => {
       <header>
         <div id="title">
           <h1>This is a page for beauty product search</h1>
-        </div>  
+        </div>
         <figure>
           <img src={image} alt="beauty products" />
         </figure>
       </header>
     </div>
-  )
-}
+  );
+};
 
 export default Header;

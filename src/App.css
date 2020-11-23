@@ -76,12 +76,12 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.product {
+.name {
   color: white;
   font-size: 22px;
 }
 
-.category {
+.brand {
   font-weight: bold;
   color: white;
 }

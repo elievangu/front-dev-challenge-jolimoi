@@ -1,10 +1,6 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const Form = ({
-  value,
-  onSubmit,
-  onChange
-}) => {
+const Form = ({ value, onSubmit, onChange }) => {
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -12,13 +8,13 @@ const Form = ({
         <input id="button" type="submit" value="Search" />
       </form>
     </div>
-  )
-}
+  );
+};
 
 Form.propTypes = {
-  value: PropTypes.string,
-  onSubmit: PropTypes.func,
-  onChange: PropTypes.func
+  value: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Form;

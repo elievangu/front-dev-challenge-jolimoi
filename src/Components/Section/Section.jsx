@@ -5,21 +5,12 @@ import PropTypes from "prop-types";
 import Form from "./Form";
 import Display from "./Display";
 
-const Section = ({ 
-  value, 
-  onChange, 
-  onSubmit, 
-  result 
-}) => {
+const Section = ({ value, onHandleChange, onHandleSubmit, fetch }) => {
   return (
     <div id="section">
       <section>
-        <Form 
-          value={value} 
-          onChange={onChange} 
-          onSubmit={onSubmit} 
-        />
-        <Display result={result} />
+        <Form value={value} onChange={onHandleChange} onSubmit={onHandleSubmit} />
+        <Display result={fetch} />
       </section>
     </div>
   );
@@ -29,7 +20,7 @@ Section.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
-  result: PropTypes.object
+  result: PropTypes.object,
 };
 
 export default Section;
