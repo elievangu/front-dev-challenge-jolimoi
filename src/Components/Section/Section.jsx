@@ -1,26 +1,18 @@
 //npm import
-import PropTypes from "prop-types";
-
+import React from 'react';
 //Local import
-import Form from "./Form";
-import Display from "./Display";
+import EntryForm from "../../Containers/EntryForm";
+import ProductsDisplay from "../../Containers/ProductsDisplay";
 
-const Section = ({ value, onHandleChange, onHandleSubmit, fetch }) => {
+const Section = () => {
   return (
     <div id="section">
       <section>
-        <Form value={value} onChange={onHandleChange} onSubmit={onHandleSubmit} />
-        <Display result={fetch} />
+        <EntryForm />
+        <ProductsDisplay />
       </section>
     </div>
   );
-};
-
-Section.propTypes = {
-  value: PropTypes.string,
-  onChange: PropTypes.func,
-  onSubmit: PropTypes.func,
-  result: PropTypes.object,
 };
 
 export default Section;

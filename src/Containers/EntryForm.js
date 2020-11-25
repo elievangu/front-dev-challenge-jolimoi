@@ -4,15 +4,19 @@ import { connect } from 'react-redux';
 //local import
 import Form from '../Components/Section/Form';
 
-import { addQuery } from '../Actions/index'
+import { addQuery, fetchProducts } from '../Actions/index'
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleSubmit: e => {
+    handleSubmit: (e, input) => {
       e.preventDefault()
-      dispatch(addQuery(e.value))
+      dispatch(addQuery(input.value))
+      //console.log(input.value)
+      dispatch(fetchProducts(input.value))
     }
+    
   }
+  
 }
 
 const EntryForm = connect(null, mapDispatchToProps)(Form);

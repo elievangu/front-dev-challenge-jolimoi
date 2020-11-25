@@ -2,7 +2,6 @@
 import { connect } from 'react-redux';
 
 //local import
-import { fetchDatas } from '../Actions/index';
 import Display from '../Components/Section/Display';
 
 const mapStateToProps = (state) => {
@@ -11,8 +10,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    handleSubmit: 
-  }
-}
+const ProductsDisplay = connect(
+  mapStateToProps,
+  null
+)(Display);
+
+export default ProductsDisplay;

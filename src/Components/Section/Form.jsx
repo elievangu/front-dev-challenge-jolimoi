@@ -1,10 +1,15 @@
-import PropTypes from "prop-types";
+//npm import
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Form = ({ value, onSubmit, onChange }) => {
+//local import
+
+
+const Form = ({ input, value, handleSubmit, handleClick }) => {
   return (
     <div>
-      <form onSubmit={onSubmit}>
-        <input id="input" type="text" value={value} onChange={onChange} />
+      <form onSubmit={e => handleSubmit(e, input)}>
+        <input id="input" type="text" placeholder="Enter your keyword..." ref={node => (input = node )} value={value} />
         <input id="button" type="submit" value="Search" />
       </form>
     </div>

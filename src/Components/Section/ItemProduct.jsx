@@ -1,4 +1,5 @@
 //npm import
+import React from 'react';
 import PropTypes from "prop-types";
 //local import
 
@@ -6,17 +7,18 @@ import PropTypes from "prop-types";
 const capitalizeFirstLetter = (string) =>
   string.charAt(0).toUpperCase() + string.slice(1);
 
-const ItemProduct = ({ products }) => {
-  return products.map((product) => (
-    <li key={product.id} className="name">
-      <span className="brand">{capitalizeFirstLetter(product.brand)} - </span>
-      {capitalizeFirstLetter(product.name)}
+const ItemProduct = ({ brand, name }) => {
+  return (
+    <li className="name">
+      <span className="brand">{capitalizeFirstLetter(brand)} - </span>
+      {capitalizeFirstLetter(name)}
     </li>
-  ));
+  );
 };
 
 ItemProduct.propTypes = {
-  products: PropTypes.arrayOf(PropTypes.object).isRequired,
+  brand: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 };
 
 export default ItemProduct;
