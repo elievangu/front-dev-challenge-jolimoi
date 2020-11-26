@@ -11,9 +11,9 @@ const Header = () => {
         <div id="title">
           <h1>This is a page for beauty product search</h1>
         </div>
-        <figure>
+        <div id="figure">
           <img src={image} alt="beauty products" />
-        </figure>
+        </div>
       </header>
     </div>
   );

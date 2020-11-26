@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 //local import
 
 
-const Form = ({ input, value, handleSubmit, handleClick }) => {
+const Form = ({ input, value, handleSubmit}) => {
   return (
     <div>
       <form onSubmit={e => handleSubmit(e, input)}>
-        <input id="input" type="text" placeholder="Enter your keyword..." ref={node => (input = node )} value={value} />
+        <input id="input" type="text" placeholder="Enter your keyword..." autoComplete="off" ref={node => (input = node )} value={value} />
         <input id="button" type="submit" value="Search" />
       </form>
     </div>

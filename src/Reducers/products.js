@@ -2,14 +2,7 @@
 
 //local import
 
-const initialState = [{
-    id: 1737,
-    brand: "Tchoko",
-    name: "Mafuta",
-    ingredient_list: [
-        "mafuta ya mbila"
-    ]
-}]
+const initialState = [];
 
 const products = (state = initialState, action) => {
   switch(action.type) {
