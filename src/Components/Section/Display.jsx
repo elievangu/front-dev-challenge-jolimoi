@@ -1,9 +1,10 @@
 //npm import
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 //local import
 import ItemProduct from "./ItemProduct";
+//import Loading from "../Loading/Loading";
 
 const Display = ({ products }) => {
   const productsList = products.map((product) => (
@@ -19,6 +20,6 @@ const Display = ({ products }) => {
 };
 
 Display.propTypes = {
-  products: PropTypes.arrayOf(PropTypes.object)
-}
+  products: PropTypes.arrayOf(PropTypes.object),
+};
 export default Display;

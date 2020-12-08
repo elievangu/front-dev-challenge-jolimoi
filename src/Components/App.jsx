@@ -1,17 +1,22 @@
 //npm import
+import { Switch, Route } from "react-router-dom";
 
 //Local import
-import Header from './Header/Header';
-import Section from './Section/Section';
-import '../App.css';
+import UserInterface from "./Interface/Interface";
+import SignIn from "./SignIn/SignIn";
+import SignUp from "./SignUp/SignUp";
+import "../App.css";
 
 const App = () => {
   return (
-    <div id="app">
-      <Header />
-      <Section />
+    <div>
+      <Switch>
+        <Route exact path="/" render={UserInterface} />
+        <Route path="/sign-up" render={SignUp} />
+        <Route path="/sign-in" render={SignIn} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;

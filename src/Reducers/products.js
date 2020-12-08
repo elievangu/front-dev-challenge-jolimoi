@@ -5,13 +5,15 @@
 const initialState = [];
 
 const products = (state = initialState, action) => {
-  switch(action.type) {
-    case 'RECEIVE_PRODUCTS':
-      return action.products
+  switch (action.type) {
+    case "REQUEST_PRODUCT":
+      return initialState;
+    case "RECEIVE_PRODUCTS":
+      return action.products;
 
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default products;
