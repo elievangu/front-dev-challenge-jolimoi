@@ -9,9 +9,11 @@ import "./index.css";
 import App from "./Components/App";
 import reportWebVitals from "./reportWebVitals";
 import configureStore, { history } from "./Store/configureStore";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 const store = configureStore();
-
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 const QueryApp = () => {
   return (
     <Provider store={store}>
@@ -23,7 +25,13 @@ const QueryApp = () => {
 };
 ReactDOM.render(
   <React.StrictMode>
-    <QueryApp />
+    <Auth0Provider
+      domain={domain}
+      clientId={clientId}
+      redirectUri={window.location.origin}
+    >
+      <QueryApp />
+    </Auth0Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
