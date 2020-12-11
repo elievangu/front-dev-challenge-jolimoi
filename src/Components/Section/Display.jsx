@@ -6,10 +6,12 @@ import { usePromiseTracker } from "react-promise-tracker";
 //local import
 import ItemProduct from "./ItemProduct";
 import Loading from "../Loading/Loading";
+//import { store } from '../../index.js';
 
 const Display = ({ products }) => {
+  
   const productsList = products.map((product) => (
-    product === undefined ? <h3>N/C</h3> : <ItemProduct key={product.id} brand={product.brand} name={product.name} />
+    <ItemProduct key={product.id} brand={product.brand} name={product.name} />
   ));
   const { promiseInProgress } = usePromiseTracker();
   return (

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 //local import
 import Form from '../Components/Section/Form';
 
-import { addQuery, fetchProducts } from '../Actions/index'
+import { addQuery, fetchProducts, errorQuery } from '../Actions/index'
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -13,6 +13,12 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(addQuery(input.value))
       //console.log(input.value)
       dispatch(fetchProducts(input.value))
+    },
+    handleMessage: (e) => {
+      e.preventDefault()
+      dispatch(errorQuery())
+      alert("This field should not be empty !")
+      
     }
     
   }

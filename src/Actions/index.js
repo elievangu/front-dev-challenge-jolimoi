@@ -39,6 +39,18 @@ export const logOut = () => {
   }
 }
 
+export const errorQuery = () => {
+  return {
+    type: 'ERROR_QUERY'
+  }
+}
+export const errorStatus = (error) => {
+  return {
+    type: 'ERROR_STATUS',
+    error
+  }
+}
+
 //asynchronous Actions
 export const fetchProducts = (query) => {
   
@@ -53,11 +65,11 @@ export const fetchProducts = (query) => {
           for (var i=0; i<4; i++)
             slicedData[i] = data[i];
             dispatch(receiveProducts(slicedData));
-          //console.log(slicedDatas)
+            console.log(json.data)
         }
       )
       .catch(error => {
-        console.log(error)
+        dispatch(errorStatus(error))
       }))
   }
 }
