@@ -18,8 +18,8 @@ const Form = ({ input, value, handleSubmit}) => {
 
 Form.propTypes = {
   value: PropTypes.string.isRequired,
-  onSubmit: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  
 };
 
 export default Form;

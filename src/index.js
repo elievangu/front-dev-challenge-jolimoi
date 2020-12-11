@@ -7,6 +7,7 @@ import { ConnectedRouter } from "connected-react-router";
 //local import
 import "./index.css";
 import App from "./Components/App";
+//import LogIn from './Components/Log/LogIn/LogIn'
 import reportWebVitals from "./reportWebVitals";
 import configureStore, { history } from "./Store/configureStore";
 import { Auth0Provider } from "@auth0/auth0-react";
@@ -24,15 +25,13 @@ const QueryApp = () => {
   );
 };
 ReactDOM.render(
-  <React.StrictMode>
-    <Auth0Provider
-      domain={domain}
-      clientId={clientId}
-      redirectUri={window.location.origin}
-    >
-      <QueryApp />
-    </Auth0Provider>
-  </React.StrictMode>,
+  <Auth0Provider
+    domain={domain}
+    clientId={clientId}
+    redirectUri={window.location.origin}
+  >
+    <QueryApp />
+  </Auth0Provider>,
   document.getElementById("root")
 );
 
